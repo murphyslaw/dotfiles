@@ -1,0 +1,6 @@
+[[ -s /opt/local/etc/bash_completion ]] && source /opt/local/etc/bash_completion
+[[ -s $HOME/.bash/git_completion ]] && source $HOME/.bash/git_completion
+
+complete -C ~/.bash/completion_scripts/rake_completion -o default rake
+complete -C ~/.bash/completion_scripts/project_completion -o default c
+complete -C ~/.bash/completion_scripts/capistrano_completion -o default cap

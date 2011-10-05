@@ -1,0 +1,33 @@
+[user]
+	name = Falk Köppe
+	email = falk.koeppe@infopark.de
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  sb = show-branch
+  di = diff
+  serve = daemon --base-path=/Users/falk/Projekte --export-all
+  unstaged = diff
+  staged = diff --cached
+  oneline = log --pretty=oneline
+  tree = log --pretty=format:'%h %s' --graph --all -10
+[core]
+  legacyheaders = false
+  excludesfile = /Users/falk/.gitignore
+  quotepath = false
+  editor = /usr/bin/mate -w
+[branch]
+  autosetupmerge = true
+[repack]
+  usedeltabaseoffset = true
+[github]
+  user = murphyslaw
+  token = 59cc7ec1c14d93af9961760303834815
+[svn]
+  findcopiesharder = 1
+  rmdir = 1

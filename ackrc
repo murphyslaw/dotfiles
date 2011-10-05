@@ -1,0 +1,3 @@
+--type-add=ruby=.haml
+--type-set=ignorables=.log,.tmp,.pdf
+--noignorables

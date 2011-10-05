@@ -1,0 +1,30 @@
+# Set standard command colors
+export CLICOLOR=1
+export LSCOLORS=dxfxcxdxbxegedabagadad
+
+# Set standard editor
+export EDITOR='mate -w'
+
+# Load tmux project scripts
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# Initialize Ruby Version Manager (RVM).
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+#
+# Shell options
+#
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
+shopt -s no_empty_cmd_completion
+
+#
+# Prompt
+#
+
+# Enable prompt output for rvm and git
+[[ -s "$HOME/.rvm/contrib/ps1_functions.custom" ]] && source "$HOME/.rvm/contrib/ps1_functions.custom"
+
+# Set default prompt
+ps1_set --prompt ⸫

@@ -1,0 +1,48 @@
+#
+# Alias
+#
+alias gitx='gitx --all'
+alias ls='ls -lapk'
+alias ..='cd ..'
+alias killssh='ps -ef | grep ssh | grep -v grep && killall ssh'
+
+#
+# Vico alias
+#
+alias vico='open -a /Applications/Vico.app'
+
+#
+# Vim alias
+#
+alias vim='open -a /Applications/MacVim.app'
+
+#
+# Project alias
+#
+alias sesone='cd ~/Projekte/SES-Astra/ses-one'
+alias sessat='cd ~/Projekte/SES-Astra/ses-satellites'
+alias sesdealers='cd ~/Projekte/SES-Astra/ses-dealers'
+alias b2b='cd ~/Projekte/SES-Astra/ses-b2b'
+alias b2c='cd ~/Projekte/SES-Astra/ses-b2c'
+alias sesa2c='cd ~/Projekte/SES-Astra/ses-astra2connect'
+alias sesafrica='cd ~/Projekte/SES-Astra/ses-africa'
+alias sync='cd ~/Projekte/SES-Astra/one-ses/crm_sync'
+alias omc='cd ~/Projekte/omc'
+alias omc_connector='cd ~/Projekte/omc_connector'
+alias rails_connector='cd ~/Projekte/rails_connector'
+alias enbw='cd ~/Projekte/enbw_politikportal'
+alias lux='cd ~/Projekte/luxemburg_extranet'
+alias euvino='cd ~/Projekte/euvino'
+
+#
+# Rails alias
+#
+alias rs='rails server'
+alias rc='rails console'
+alias rg='rails generate'
+alias tlog='tail -f log/development'
+
+#
+# Bundler alias
+#
+alias b="bundle exec $1"
