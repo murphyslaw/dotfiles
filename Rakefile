@@ -35,10 +35,14 @@ def filepath(filename)
   File.join(ENV['HOME'], filename)
 end
 
+def target_filepath(filename)
+  "$HOME/#{filename}"
+end
+
 def replace_file(file)
   filename = filename(file)
 
-  system %Q{rm -rf "$HOME/#{filename}"}
+  system %Q{rm -rf "#{target_filepath(filename)}"}
 
   link_file(file)
 end
@@ -62,8 +66,9 @@ def overwrite_file(file)
 end
 
 def link_file(file)
+  filename = filename(file)
+
   if file =~ /.erb$/
-    filename = filename(file)
     filepath = filepath(filename)
 
     puts "generating ~/#{filename}"
@@ -74,8 +79,10 @@ def link_file(file)
       new_file.write(content)
     end
   else
-    puts "linking ~/.#{file}"
+    puts "linking ~/#{filename}"
 
-    system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+    folder = File.directory?(file) ? '/' : ''
+
+    system %Q{ln -s "$PWD/#{file}#{folder}" "#{target_filepath(filename)}"}
   end
 end
