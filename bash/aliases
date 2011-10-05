@@ -2,7 +2,7 @@
 # Alias
 #
 alias gitx='gitx --all'
-alias ls='ls -lapk'
+alias ls='ls -lapkh'
 alias ..='cd ..'
 alias killssh='ps -ef | grep ssh | grep -v grep && killall ssh'
 
