@@ -1,0 +1,60 @@
+# Set standard command colors
+export CLICOLOR=1
+export LSCOLORS=dxfxcxdxbxegedabagadad
+
+export EDITOR='mate -w'
+
+# Load tmux project scripts
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# Initialize Ruby Version Manager (RVM).
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+#
+# Shell options
+#
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+REPORTTIME=10 # print elapsed time when more than 10 seconds
+
+setopt NO_BG_NICE # don't nice background tasks
+setopt NO_HUP
+setopt NO_LIST_BEEP
+setopt LOCAL_OPTIONS # allow functions to have local options
+setopt LOCAL_TRAPS # allow functions to have local traps
+setopt HIST_VERIFY
+setopt SHARE_HISTORY # share history between sessions ???
+setopt EXTENDED_HISTORY # add timestamps to history
+setopt PROMPT_SUBST
+setopt CORRECT
+setopt COMPLETE_IN_WORD
+setopt IGNORE_EOF
+
+setopt APPEND_HISTORY # adds history
+setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
+setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
+setopt HIST_REDUCE_BLANKS
+
+zle -N newtab
+
+bindkey '^[^[[D' backward-word
+bindkey '^[^[[C' forward-word
+bindkey '^[[5D' beginning-of-line
+bindkey '^[[5C' end-of-line
+bindkey '^[[3~' delete-char
+bindkey '^[^N' newtab
+bindkey '^?' backward-delete-char
+
+#
+# Prompt
+#
+
+# PROMPT=$'%T %n@%m: %d \n⸫ '
+autoload -U colors && colors
+
+# Enable prompt output for rvm and git
+[[ -s "$HOME/.rvm/contrib/ps1_functions.zsh.custom" ]] && source "$HOME/.rvm/contrib/ps1_functions.zsh.custom"
+
+# Set default prompt
+ps1_set --prompt ⸫
