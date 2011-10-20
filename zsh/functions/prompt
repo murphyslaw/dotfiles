@@ -1,0 +1,41 @@
+ps1_identity()
+{
+  printf "%s" "%{$fg[red]%}%m%{$reset_color%}@%{$fg[red]%}%n%{$reset_color%}: %{$fg[green]%}%~%{$reset_color%} "
+}
+
+ps1_git()
+{
+  local branch=""
+
+  setopt extendedglob
+
+  command -v git >/dev/null 2>&1 || {
+    printf " \033[1;37m\033[41m[git not found]\033[m "
+    return 0
+  }
+
+  branch=$(git symbolic-ref -q HEAD 2>/dev/null) || return 0
+  branch=${branch##refs/heads/}
+
+  printf "%s" "%{$fg[yellow]%}(${branch}$(ps1_git_status))%{$reset_color%} "
+}
+
+ps1_git_status()
+{
+  local git_status="$(git status 2>/dev/null)"
+
+  [[ "${git_status}" = *deleted* ]]                    && printf "%s" "-"
+  [[ "${git_status}" = *Untracked[[:space:]]files:* ]] && printf "%s" "+"
+  [[ "${git_status}" = *modified:* ]]                  && printf "%s" "*"
+}
+
+ps1_rvm()
+{
+  command -v rvm-prompt >/dev/null 2>&1 && printf "%s" "%{$fg[blue]%}$(rvm-prompt)%{$reset_color%} "
+}
+
+ps1_update()
+{
+  export PS1='%* $(ps1_identity)$(ps1_git)$(ps1_rvm)
+∴ '
+}

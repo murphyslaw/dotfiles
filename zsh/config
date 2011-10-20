@@ -11,6 +11,15 @@ export EDITOR='mate -w'
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 #
+# Prompt
+#
+
+autoload -U colors && colors
+
+# Enables custom prompt output for rvm and git
+[[ -s "$HOME/.zsh/functions/prompt" ]] && source "$HOME/.zsh/functions/prompt" && ps1_update
+
+#
 # Shell options
 #
 HISTFILE=~/.zsh_history
@@ -45,16 +54,3 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
-
-#
-# Prompt
-#
-
-# PROMPT=$'%T %n@%m: %d \n⸫ '
-autoload -U colors && colors
-
-# Enable prompt output for rvm and git
-[[ -s "$HOME/.rvm/contrib/ps1_functions.zsh.custom" ]] && source "$HOME/.rvm/contrib/ps1_functions.zsh.custom"
-
-# Set default prompt
-ps1_set --prompt ⸫
