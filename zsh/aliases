@@ -5,6 +5,7 @@ alias gitx='gitx --all'
 alias ls='ls -lapkh'
 alias ..='cd ..'
 alias killssh='ps -ef | grep ssh | grep -v grep && killall ssh'
+alias diff='diff -bB'
 
 #
 # Vico alias
