@@ -5,17 +5,34 @@
   status = auto
   diff = auto
   branch = auto
+  interactive = auto
+  ui = auto
 [alias]
   st = status
   ci = commit
+  amend = commit --amend
   co = checkout
   sb = show-branch
   di = diff
+  ds = diff --staged
+  cp = cherry-pick -x
+  b = branch -v
+  r = remote -v
+  t = tag -l
+  rc = rebase --continue
+  rs = rebase --skip
+  ra = rebase --abort
   serve = daemon --base-path=/Users/falk/Projekte --export-all
   unstaged = diff
   staged = diff --cached
+  unstage = reset HEAD
+  uncommit = reset --soft HEAD^
   oneline = log --pretty=oneline
   tree = log --pretty=format:'%h %s' --graph --all -10
+  changes = log --pretty=format:"%h %cr %cn %Cgreen%s%Creset" --name-status
+  short = log --pretty=format:"%h %cr %cn %Cgreen%s%Creset"
+  filelog = log -u
+  changelog = log --pretty=format:" * %s"
 [core]
   legacyheaders = false
   excludesfile = /Users/falk/.gitignore
@@ -31,3 +48,7 @@
 [svn]
   findcopiesharder = 1
   rmdir = 1
+[gc]
+  auto = 1
+[merge]
+  summary = true
