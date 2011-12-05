@@ -6,16 +6,12 @@ alias ls='ls -lapkh'
 alias ..='cd ..'
 alias killssh='ps -ef | grep ssh | grep -v grep && killall ssh'
 alias diff='diff -bB'
+alias mkdir='mkdir -pv'
 
 #
 # Vico alias
 #
 alias vico='open -a /Applications/Vico.app'
-
-#
-# Vim alias
-#
-alias vim='open -a /Applications/MacVim.app'
 
 #
 # Project alias
@@ -34,6 +30,7 @@ alias rails_connector='cd ~/Projekte/rails_connector'
 alias enbw='cd ~/Projekte/enbw_politikportal'
 alias lux='cd ~/Projekte/luxemburg_extranet'
 alias euvino='cd ~/Projekte/euvino'
+alias sihl='cd ~/Projekte/sihl'
 
 #
 # Rails alias
@@ -46,4 +43,4 @@ alias tlog='tail -f log/development'
 #
 # Bundler alias
 #
-alias b="bundle exec $1"
+alias b='bundle exec $1'
