@@ -5,3 +5,6 @@
 
 # use .localrc for settings specific to one system
 [[ -s $HOME/.localrc ]] && source $HOME/.localrc
+
+# rbenv initialization
+eval "$(rbenv init -)"

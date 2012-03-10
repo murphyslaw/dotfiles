@@ -2,13 +2,10 @@
 export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagadad
 
-export EDITOR='mate -w'
+export EDITOR='subl -w'
 
 # Load tmux project scripts
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-
-# Initialize Ruby Version Manager (RVM).
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 #
 # Prompt
@@ -16,7 +13,7 @@ export EDITOR='mate -w'
 
 autoload -U colors && colors
 
-# Enables custom prompt output for rvm and git
+# Enables custom prompt output for ruby version and git
 [[ -s "$HOME/.zsh/functions/prompt" ]] && source "$HOME/.zsh/functions/prompt" && ps1_update
 
 #

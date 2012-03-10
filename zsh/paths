@@ -4,5 +4,8 @@ export PATH=/usr/local/mysql/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/Projekte/fop-0.94:$PATH
 
-# Set java home
+# Set java home.
 export JAVA_HOME=/Library/Java/Home
+
+# Set rbenv configuration.
+export PATH="$HOME/.rbenv/bin:$PATH"

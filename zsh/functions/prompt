@@ -29,13 +29,17 @@ ps1_git_status()
   [[ "${git_status}" = *modified:* ]]                  && printf "%s" "*"
 }
 
-ps1_rvm()
+ps1_ruby_version()
 {
-  command -v rvm-prompt >/dev/null 2>&1 && printf "%s" "%{$fg[blue]%}$(rvm-prompt)%{$reset_color%} "
+  # command -v rvm-prompt >/dev/null 2>&1 && printf "%s" "%{$fg[blue]%}$(rvm-prompt)%{$reset_color%} "
+
+  # command -v $(~/.rbenv/bin/rbenv version-name) >/dev/null 2>&1 && printf "%s" "%{$fg[blue]%}$(~/.rbenv/bin/rbenv version-name)%{$reset_color%} "
+
+  printf "%s" "%{$fg[blue]%}$(~/.rbenv/bin/rbenv version-name)%{$reset_color%} "
 }
 
 ps1_update()
 {
-  export PS1='%* $(ps1_identity)$(ps1_git)$(ps1_rvm)
+  export PS1='%* $(ps1_identity)$(ps1_git)$(ps1_ruby_version)
 ∴ '
 }
