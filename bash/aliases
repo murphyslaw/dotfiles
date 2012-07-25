@@ -33,6 +33,7 @@ alias rails_connector='cd ~/Projekte/rails_connector'
 alias enbw='cd ~/Projekte/enbw_politikportal'
 alias lux='cd ~/Projekte/luxemburg_extranet'
 alias euvino='cd ~/Projekte/euvino'
+alias partner='cd ~/Projekte/training/2012-06-25/textile-service'
 
 #
 # Rails alias
