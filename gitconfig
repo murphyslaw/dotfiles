@@ -37,7 +37,7 @@
   legacyheaders = false
   excludesfile = /Users/falk/.gitignore
   quotepath = false
-  editor = /usr/bin/subl -w
+  editor = /usr/local/bin/subl -w
 [branch]
   autosetupmerge = true
 [repack]
