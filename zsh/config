@@ -5,7 +5,7 @@ export LSCOLORS=dxfxcxdxbxegedabagadad
 export EDITOR='subl -w'
 
 # Load tmux project scripts
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+# [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 #
 # Prompt
@@ -37,6 +37,7 @@ setopt CORRECT
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
 setopt PRINT_EXIT_VALUE
+setopt rmstarsilent
 
 setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions

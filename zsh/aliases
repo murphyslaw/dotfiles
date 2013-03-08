@@ -7,6 +7,7 @@ alias ..='cd ..'
 alias killssh='ps -ef | grep ssh | grep -v grep && killall ssh'
 alias diff='diff -bB'
 alias mkdir='mkdir -pv'
+alias stree='open -a SourceTree'
 
 #
 # Vico alias
@@ -32,7 +33,6 @@ alias lux='cd ~/Projekte/luxemburg_extranet'
 alias euvino='cd ~/Projekte/euvino'
 alias sihl='cd ~/Projekte/sihl'
 alias partner='cd ~/Projekte/training/2012-06-25/textile-service'
-alias sciime='cd ~/Projekte/sciime'
 
 #
 # Rails alias

@@ -1,8 +1,8 @@
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH
-export PATH=/opt/local/sbin:/opt/local/bin:$PATH
-export PATH=/usr/local/mysql/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/Projekte/fop-0.94:$PATH
+export PATH=/usr/local/mysql/bin:$PATH
+export PATH=/opt/local/sbin:/opt/local/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
 # Set java home
 export JAVA_HOME=/Library/Java/Home
