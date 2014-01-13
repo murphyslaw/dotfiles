@@ -33,9 +33,9 @@ ps1_ruby_version()
 {
   # command -v rvm-prompt >/dev/null 2>&1 && printf "%s" "%{$fg[blue]%}$(rvm-prompt)%{$reset_color%} "
 
-  # command -v $(~/.rbenv/bin/rbenv version-name) >/dev/null 2>&1 && printf "%s" "%{$fg[blue]%}$(~/.rbenv/bin/rbenv version-name)%{$reset_color%} "
+  # command -v $(rbenv version-name) >/dev/null 2>&1 && printf "%s" "%{$fg[blue]%}$(rbenv version-name)%{$reset_color%} "
 
-  printf "%s" "%{$fg[blue]%}$(~/.rbenv/bin/rbenv version-name)%{$reset_color%} "
+  printf "%s" "%{$fg[blue]%}$(rbenv version-name)%{$reset_color%} "
 }
 
 ps1_update()
