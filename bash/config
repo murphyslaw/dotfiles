@@ -15,10 +15,3 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
 shopt -s no_empty_cmd_completion
-
-#
-# Prompt
-#
-
-# Set default prompt
-ps1_set --prompt ⸫
