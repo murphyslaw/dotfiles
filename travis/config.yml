@@ -1,16 +1,17 @@
 ---
 last_check:
-  etag: !binary |-
-    IjhiZjg5NzUxZDExZTI3NWU0ZDU1MzM5MGZmZGJmNTc0Ig==
-  version: 1.5.5
-  at: 1382345521
+  etag: '"2df3424787afbe972c87719e151b5541"'
+  version: 1.6.13
+  at: 1402909223
 endpoints:
   https://api.travis-ci.org/:
-    access_token: -AUYUNK_2t-Uaf4G2GTKTA
+    access_token: t4QqnwzKOSxgJIx8yiuwMw
   https://api.travis-ci.com/:
-    access_token: WzP0OcCmrUUCfKDd1z01OQ
+    access_token: xHCQKRK7CDxu8tgvF3lD7A
 repos:
   murphyslaw/infopark_kickstarter:
     endpoint: https://api.travis-ci.org/
   infopark/infopark_kickstarter:
     endpoint: https://api.travis-ci.org/
+checked_completion: true
+completion_version: 1.6.13
