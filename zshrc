@@ -1,5 +1,5 @@
 # rbenv initialization
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 [[ -s $HOME/.zsh/aliases ]] && source $HOME/.zsh/aliases
 [[ -s $HOME/.zsh/paths ]] && source $HOME/.zsh/paths
@@ -8,12 +8,3 @@ eval "$(rbenv init -)"
 
 # use .localrc for settings specific to one system
 [[ -s $HOME/.localrc ]] && source $HOME/.localrc
-
-# pro cd function
-pd() {
-  projDir=$(pro search $1)
-  cd ${projDir}
-}
-
-# travis
-source /Users/falk/.travis/travis.sh
