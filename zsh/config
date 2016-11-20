@@ -3,10 +3,7 @@ export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagadad
 
 # Set standard editor
-export EDITOR='atom -w'
-
-# Load tmux project scripts
-# [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+export EDITOR='edit -w'
 
 #
 # Prompt
