@@ -7,4 +7,4 @@ eval "$(rbenv init - zsh)"
 [[ -s $HOME/.zsh/completions ]] && source $HOME/.zsh/completions
 
 # use .localrc for settings specific to one system
-[[ -s $HOME/.localrc ]] && source $HOME/.localrc
+[[ -s $HOME/.localrc ]] && source $HOME/.localrc || true
