@@ -1,5 +1,6 @@
 #
-# Alias
+# Aliases
 #
+
 alias ls='ls -lapkh'
 alias ..='cd ..'
