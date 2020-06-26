@@ -1,8 +1,0 @@
-#
-# ruby-debug configuration file
-#
-
-set autolist # Execute list command on every breakpoint.
-set reload # Reload source code when changed.
-set listsize 20 # Set number of source lines to list by default to n.
-#set forcestep # Make sure the next and step commands always move to a new line.
